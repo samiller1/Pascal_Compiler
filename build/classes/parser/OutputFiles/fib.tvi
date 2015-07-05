@@ -1,0 +1,58 @@
+CODE
+0: call MAIN, 0
+1: exit
+2: PROCBEGIN FIB
+3: alloc 16
+4: move 1, %3
+5: beq ^%0, %3, 7
+6: goto 10
+7: move 1, %4
+8: move %4, _2
+9: goto 28
+10: move 2, %3
+11: beq ^%0, %3, 13
+12: goto 16
+13: move 1, %4
+14: move %4, _2
+15: goto 28
+16: move 1, %3
+17: sub ^%0, %3, %7
+18: param @%-7
+19: call FIB, 1
+20: move _2, %10
+21: move 2, %3
+22: sub ^%0, %3, %7
+23: param @%-7
+24: call FIB, 1
+25: move _2, %10
+26: add %10, %10, %7
+27: move %7, _2
+28: free 16
+29: PROCEND
+30: PROCBEGIN MAIN
+31: alloc 8
+32: move 0, _3
+33: move _3, _0
+34: move 0, _4
+35: beq _0, _4, 37
+36: goto 55
+37: inp _1
+38: move 0, _4
+39: beq _1, _4, 41
+40: goto 44
+41: move 1, _3
+42: move _3, _0
+43: goto 54
+44: print "I = "
+45: outp _1
+46: newl
+47: param @_1
+48: call FIB, 1
+49: move _2, _7
+50: move _7, _1
+51: print "I = "
+52: outp _1
+53: newl
+54: goto 34
+55: free 8
+56: PROCEND

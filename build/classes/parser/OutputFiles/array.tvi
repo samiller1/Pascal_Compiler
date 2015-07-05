@@ -1,0 +1,69 @@
+CODE
+0: call MAIN, 0
+1: exit
+2: PROCBEGIN MAIN
+3: alloc 47
+4: move 1, _7
+5: move 1, _8
+6: sub _7, _8, _6
+7: move 1, _7
+8: stor _7, _6, _0
+9: move 2, _7
+10: move 1, _8
+11: sub _7, _8, _6
+12: move 2, _7
+13: stor _7, _6, _0
+14: move 5, _7
+15: move 1, _8
+16: sub _7, _8, _6
+17: move 3, _7
+18: stor _7, _6, _0
+19: move 4, _7
+20: move 1, _8
+21: sub _7, _8, _6
+22: move 4, _7
+23: stor _7, _6, _0
+24: move 5, _7
+25: move 1, _8
+26: sub _7, _8, _6
+27: move 5, _7
+28: stor _7, _6, _0
+29: move 230000000000, _7
+30: move _7, _5
+31: move 1, _7
+32: move 1, _8
+33: sub _7, _8, _6
+34: load _0, _6, _30
+35: print "$$TEMPy = "
+36: outp _30
+37: newl
+38: move 2, _7
+39: move 1, _8
+40: sub _7, _8, _6
+41: load _0, _6, _30
+42: print "$$TEMPy = "
+43: outp _30
+44: newl
+45: move 3, _7
+46: move 1, _8
+47: sub _7, _8, _6
+48: load _0, _6, _30
+49: print "$$TEMPy = "
+50: outp _30
+51: newl
+52: move 4, _7
+53: move 1, _8
+54: sub _7, _8, _6
+55: load _0, _6, _30
+56: print "$$TEMPy = "
+57: outp _30
+58: newl
+59: move 5, _7
+60: move 1, _8
+61: sub _7, _8, _6
+62: load _0, _6, _30
+63: print "$$TEMPy = "
+64: outp _30
+65: newl
+66: free 47
+67: PROCEND

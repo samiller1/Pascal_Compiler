@@ -1,0 +1,39 @@
+CODE
+0: call MAIN, 0
+1: exit
+2: PROCBEGIN GCD
+3: alloc 9
+4: move 0, %3
+5: beq ^%0, %3, 7
+6: goto 10
+7: ltof ^%1, %4
+8: move %4, _2
+9: goto 21
+10: move ^%1, %2
+11: bge %2, ^%0, 13
+12: goto 16
+13: sub %2, ^%0, %5
+14: move %5, %2
+15: goto 11
+16: param @%2
+17: param %0
+18: call GCD, 2
+19: move _2, %4
+20: move %4, _2
+21: free 9
+22: PROCEND
+23: PROCBEGIN MAIN
+24: alloc 4
+25: inp _1
+26: inp _0
+27: bgt _1, _0, 29
+28: goto 36
+29: param @_0
+30: param @_1
+31: call GCD, 2
+32: move _2, _3
+33: print "$$TEMP = "
+34: foutp _3
+35: newl
+36: free 4
+37: PROCEND
